@@ -15,7 +15,7 @@ export function HeroPortrait({ src, alt }: { src: string; alt: string }) {
       fill
       priority
       onError={() => setCurrent("/profile.svg")}
-      className="object-cover object-center opacity-90 grayscale"
+      className="object-cover object-[center_22%] opacity-90 grayscale"
       sizes="100vw"
     />
   );
