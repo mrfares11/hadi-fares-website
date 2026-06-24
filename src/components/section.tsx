@@ -1,29 +1,27 @@
-import { Reveal } from "@/components/reveal";
+import { Reveal } from "@/components/motion-primitives";
 
 export function Section({
   id,
-  eyebrow,
+  index,
   title,
   children,
   className = "",
 }: {
   id: string;
-  eyebrow?: string;
+  index: string; // e.g. "01"
   title: string;
   children: React.ReactNode;
   className?: string;
 }) {
   return (
-    <section id={id} className={`px-5 py-20 ${className}`}>
+    <section id={id} className={`px-5 py-24 sm:py-28 ${className}`}>
       <div className="mx-auto max-w-5xl">
         <Reveal>
-          <div className="mb-10">
-            {eyebrow && (
-              <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">
-                {eyebrow}
-              </p>
-            )}
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
+          <div className="mb-12 flex items-end justify-between gap-4 border-b border-line pb-5">
+            <h2 className="font-display text-3xl font-bold tracking-tight sm:text-5xl">
+              {title}
+            </h2>
+            <span className="font-mono text-sm text-accent">／ {index}</span>
           </div>
         </Reveal>
         {children}

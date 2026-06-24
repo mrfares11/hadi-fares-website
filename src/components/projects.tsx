@@ -1,101 +1,131 @@
-import Image from "next/image";
-import { Section } from "@/components/section";
-import { Reveal } from "@/components/reveal";
-import { projects } from "@/data/content";
-import { ArrowUpRightIcon, GitHubIcon } from "@/components/icons";
+"use client";
 
-// Gradient palettes used for the placeholder banner when a project has no image yet.
+import Image from "next/image";
+import { useState } from "react";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  AnimatePresence,
+} from "motion/react";
+import { Section } from "@/components/section";
+import { Reveal } from "@/components/motion-primitives";
+import { projects } from "@/data/content";
+import { ArrowUpRightIcon } from "@/components/icons";
+
 const gradients = [
-  "from-indigo-500 to-cyan-500",
-  "from-violet-600 to-pink-500",
-  "from-sky-500 to-emerald-500",
-  "from-orange-500 to-rose-500",
-  "from-fuchsia-600 to-indigo-500",
-  "from-teal-500 to-blue-600",
+  "from-rose-500 to-orange-400",
+  "from-violet-500 to-fuchsia-400",
+  "from-sky-500 to-emerald-400",
+  "from-amber-500 to-rose-400",
+  "from-indigo-500 to-cyan-400",
+  "from-teal-500 to-lime-400",
+  "from-fuchsia-500 to-pink-400",
+  "from-cyan-500 to-blue-500",
 ];
 
 export function Projects() {
+  const [active, setActive] = useState<number | null>(null);
+  const mx = useMotionValue(0);
+  const my = useMotionValue(0);
+  const x = useSpring(mx, { stiffness: 180, damping: 22, mass: 0.4 });
+  const y = useSpring(my, { stiffness: 180, damping: 22, mass: 0.4 });
+
   return (
-    <Section id="projects" eyebrow="Projects" title="Things I've built">
-      <div className="grid gap-6 sm:grid-cols-2">
-        {projects.map((p, i) => (
-          <Reveal key={p.title} delay={(i % 2) * 100}>
-            <article
-              className={`group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 ${
-                p.featured ? "sm:col-span-2" : ""
-              }`}
-            >
-              <div
-                className={`relative w-full overflow-hidden ${
-                  p.featured ? "aspect-[2.4/1]" : "aspect-[16/10]"
-                }`}
+    <Section id="projects" index="03" title="Selected Work">
+      <div
+        className="border-t border-line"
+        onMouseMove={(e) => {
+          mx.set(e.clientX);
+          my.set(e.clientY);
+        }}
+      >
+        {projects.map((p, i) => {
+          const Tag = p.link || p.repo ? "a" : "div";
+          const href = p.link || p.repo;
+          return (
+            <Reveal key={p.title} delay={(i % 4) * 0.04}>
+              <Tag
+                {...(href
+                  ? { href, target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+                onMouseEnter={() => setActive(i)}
+                onMouseLeave={() => setActive(null)}
+                className="group block border-b border-line py-7"
               >
-                {p.image ? (
-                  <Image
-                    src={p.image}
-                    alt={p.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, 50vw"
-                  />
-                ) : (
-                  <div
-                    className={`flex h-full w-full items-end bg-gradient-to-br ${
-                      gradients[i % gradients.length]
-                    } p-5`}
-                  >
-                    <span className="text-lg font-semibold text-white/95 drop-shadow-sm">
-                      {p.title}
-                    </span>
-                  </div>
-                )}
-              </div>
-              <div className="flex flex-1 flex-col p-6">
-                <div className="flex items-start justify-between gap-3">
-                  <h3 className="text-lg font-semibold">{p.title}</h3>
-                  <div className="flex items-center gap-2 text-muted">
-                    {p.repo && (
-                      <a
-                        href={p.repo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${p.title} source code`}
-                        className="transition-colors hover:text-accent"
-                      >
-                        <GitHubIcon className="h-5 w-5" />
-                      </a>
-                    )}
-                    {p.link && (
-                      <a
-                        href={p.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${p.title} live`}
-                        className="transition-colors hover:text-accent"
-                      >
-                        <ArrowUpRightIcon className="h-5 w-5" />
-                      </a>
-                    )}
-                  </div>
-                </div>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
-                  {p.description}
-                </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {p.tags.map((t) => (
-                    <span
-                      key={t}
-                      className="rounded-full bg-accent-soft px-2.5 py-1 text-xs font-medium text-accent"
+                <div className="flex items-baseline gap-4">
+                  <span className="font-mono text-sm text-muted">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div className="flex-1">
+                    <h3
+                      className={`font-display text-2xl font-semibold tracking-tight transition-colors sm:text-4xl ${
+                        active === i ? "text-accent" : ""
+                      }`}
                     >
-                      {t}
-                    </span>
-                  ))}
+                      {p.title}
+                      {p.featured && (
+                        <span className="ml-3 align-middle font-mono text-xs uppercase tracking-wider text-accent">
+                          ★ featured
+                        </span>
+                      )}
+                    </h3>
+                    <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
+                      {p.description}
+                    </p>
+                    <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs text-muted">
+                      {p.tags.map((t) => (
+                        <span key={t}>{t}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <ArrowUpRightIcon
+                    className={`mt-2 h-6 w-6 shrink-0 transition-all duration-300 ${
+                      active === i
+                        ? "translate-x-1 -translate-y-1 text-accent"
+                        : "text-muted"
+                    }`}
+                  />
                 </div>
-              </div>
-            </article>
-          </Reveal>
-        ))}
+              </Tag>
+            </Reveal>
+          );
+        })}
       </div>
+
+      {/* Cursor-following preview (desktop only) */}
+      <AnimatePresence>
+        {active !== null && (
+          <motion.div
+            className="pointer-events-none fixed left-0 top-0 z-50 hidden h-52 w-80 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xl border border-line shadow-2xl md:block"
+            style={{ x, y }}
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.85 }}
+            transition={{ duration: 0.18 }}
+          >
+            {projects[active].image ? (
+              <Image
+                src={projects[active].image!}
+                alt={projects[active].title}
+                fill
+                className="object-cover"
+                sizes="320px"
+              />
+            ) : (
+              <div
+                className={`flex h-full w-full items-end bg-gradient-to-br ${
+                  gradients[active % gradients.length]
+                } p-4`}
+              >
+                <span className="font-display text-lg font-semibold text-white drop-shadow">
+                  {projects[active].title}
+                </span>
+              </div>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </Section>
   );
 }

@@ -20,9 +20,9 @@ export const site = {
 };
 
 export const socials: { label: string; href: string; icon: SocialIcon }[] = [
-  { label: "LinkedIn", href: "https://linkedin.com/in/hadi", icon: "linkedin" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/hadi-fares/", icon: "linkedin" },
   { label: "Email", href: "mailto:hadifares0101@gmail.com", icon: "email" },
-  // Add your GitHub / Google Scholar handles when ready:
+  // Add GitHub / Google Scholar later when ready:
   // { label: "GitHub", href: "https://github.com/your-handle", icon: "github" },
   // { label: "Google Scholar", href: "https://scholar.google.com/...", icon: "scholar" },
 ];
