@@ -12,7 +12,7 @@ export const site = {
   description:
     "Hadi Fares, Mechanical Engineering student at the American University of Beirut and aerial robotics researcher. Autonomous drones, computer vision, AI/ML, and GNC. Projects, publications, and achievements.",
   // Drop your photo in /public and update this path (e.g. "/profile.jpg")
-  photo: "/profile.jpg",
+  photo: "/profile.jpeg",
   // Drop your CV PDF in /public as resume.pdf (or change this path)
   resume: "/resume.pdf",
   location: "Beirut, Lebanon",
