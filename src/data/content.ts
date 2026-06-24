@@ -303,12 +303,13 @@ export const involvement: { role: string; org: string; period?: string }[] = [
 export type Shot = { src: string; alt: string; caption?: string };
 
 export const gallery: Shot[] = [
-  { src: "", alt: "Drone shot", caption: "" },
-  { src: "", alt: "Drone shot", caption: "" },
-  { src: "", alt: "Drone shot", caption: "" },
-  { src: "", alt: "Drone shot", caption: "" },
-  { src: "", alt: "Drone shot", caption: "" },
-  { src: "", alt: "Drone shot", caption: "" },
+  { src: "/gallery/dji-1.jpg", alt: "Aerial drone photo" },
+  { src: "/gallery/dji-2.jpg", alt: "Aerial drone photo" },
+  { src: "/gallery/dji-3.jpg", alt: "Aerial drone photo" },
+  { src: "/gallery/dji-4.jpg", alt: "Aerial drone photo" },
+  { src: "/gallery/dji-5.jpg", alt: "Aerial drone photo" },
+  { src: "/gallery/dji-6.jpg", alt: "Aerial drone photo" },
+  { src: "/gallery/dji-7.jpg", alt: "Aerial drone photo" },
 ];
 
 export const skills: { category: string; items: string[] }[] = [
