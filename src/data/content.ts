@@ -147,6 +147,7 @@ export const projects: Project[] = [
     description:
       "Real-time fighter-jet tracking system using LSTM networks and OpenCV to predict the jet's center position in each video frame, with reinforcement learning for optimal path planning of an autonomous interceptor. Deployed as a dockerized web application.",
     tags: ["Python", "PyTorch", "LSTM", "Reinforcement Learning", "Flask"],
+    image: "/projects/jettracker.jpg",
   },
   {
     title: "Wind Tunnel Instrumentation System",
@@ -160,6 +161,7 @@ export const projects: Project[] = [
     description:
       "ROS 2 service robot simulated in Gazebo that autonomously maps an unknown town, then accepts multi-step missions via a custom GUI: supermarket runs, food delivery, and fire-emergency response. Handles dynamic obstacles with real-time replanning and recovery behaviors.",
     tags: ["ROS 2", "Gazebo", "Path Planning", "Nav2"],
+    image: "/projects/service-robot.jpg",
   },
   {
     title: "HVAC Leak-Detection Spider Robot",
