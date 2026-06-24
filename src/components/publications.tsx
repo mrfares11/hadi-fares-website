@@ -1,43 +1,39 @@
 import { Section } from "@/components/section";
 import { Reveal } from "@/components/reveal";
 import { publications } from "@/data/content";
-import { ArrowUpRightIcon } from "@/components/icons";
 
 export function Publications() {
   if (publications.length === 0) return null;
 
   return (
-    <Section id="publications" eyebrow="Research" title="Publications">
-      <div className="space-y-4">
-        {publications.map((pub, i) => {
-          const Wrapper = pub.link ? "a" : "div";
-          return (
-            <Reveal key={i} delay={i * 80}>
-              <Wrapper
-                {...(pub.link
-                  ? { href: pub.link, target: "_blank", rel: "noopener noreferrer" }
-                  : {})}
-                className={`group block rounded-2xl border border-border bg-card p-6 ${
-                  pub.link ? "transition-colors hover:border-accent" : ""
-                }`}
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <h3 className="font-semibold leading-snug">{pub.title}</h3>
-                  {pub.link && (
-                    <ArrowUpRightIcon className="h-4 w-4 shrink-0 text-muted transition-colors group-hover:text-accent" />
-                  )}
-                </div>
-                <p className="mt-1.5 text-sm font-medium text-accent">
-                  {pub.venue} · {pub.date}
-                </p>
+    <Section id="publications" title="Publications">
+      <ol className="space-y-6">
+        {publications.map((pub, i) => (
+          <Reveal key={i} delay={i * 60}>
+            <li className="flex gap-4">
+              <span className="font-serif text-muted">[{i + 1}]</span>
+              <div>
+                <span className="font-medium">{pub.title}.</span>{" "}
+                <span className="italic text-foreground/80">{pub.venue}</span>,{" "}
+                <span className="text-muted">{pub.date}.</span>
                 {pub.description && (
-                  <p className="mt-2 text-sm text-muted">{pub.description}</p>
+                  <p className="mt-1 text-sm text-muted">{pub.description}</p>
                 )}
-              </Wrapper>
-            </Reveal>
-          );
-        })}
-      </div>
+                {pub.link && (
+                  <a
+                    href={pub.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 inline-block text-sm underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+                  >
+                    PDF ↗
+                  </a>
+                )}
+              </div>
+            </li>
+          </Reveal>
+        ))}
+      </ol>
     </Section>
   );
 }

@@ -1,72 +1,66 @@
 import Image from "next/image";
 import { site, socials } from "@/data/content";
-import { SocialGlyph, ArrowUpRightIcon } from "@/components/icons";
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden px-5 pt-32 pb-20 sm:pt-40">
-      {/* soft background glow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 -z-10 h-[480px] w-[480px] -translate-x-1/2 rounded-full bg-accent/15 blur-[120px]"
-      />
-      <div className="mx-auto flex max-w-5xl flex-col-reverse items-center gap-10 md:flex-row md:items-center md:justify-between">
-        <div className="animate-fade-up max-w-xl text-center md:text-left">
-          <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted">
-            <span className="h-2 w-2 rounded-full bg-foreground" />
-            {site.role}
-          </p>
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            Hi, I&apos;m {site.name}
-          </h1>
-          <p className="mt-4 text-lg text-muted">{site.tagline}</p>
+    <section id="top" className="px-5 pt-28 pb-6 sm:pt-32">
+      <div className="animate-fade-up mx-auto max-w-3xl">
+        <div className="flex flex-col-reverse items-start gap-6 sm:flex-row sm:justify-between">
+          <div>
+            <h1 className="font-serif text-4xl font-medium tracking-tight sm:text-5xl">
+              {site.name}
+            </h1>
+            <p className="mt-2 text-lg text-foreground/80">{site.role}</p>
+            <p className="mt-1 text-sm text-muted">
+              Mechanical Engineering · American University of Beirut
+              <br />
+              {site.location}
+            </p>
 
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-3 md:justify-start">
-            <a
-              href="#projects"
-              className="inline-flex items-center gap-1.5 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-accent-ink transition-transform hover:-translate-y-0.5"
-            >
-              View my work
-            </a>
-            {site.resume && (
+            <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
               <a
-                href={site.resume}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium transition-colors hover:bg-accent-soft"
+                href={`mailto:${site.email}`}
+                className="underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
               >
-                Resume <ArrowUpRightIcon className="h-3.5 w-3.5" />
+                Email
               </a>
-            )}
+              {site.resume && (
+                <a
+                  href={site.resume}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+                >
+                  CV
+                </a>
+              )}
+              {socials
+                .filter((s) => s.icon !== "email")
+                .map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+                  >
+                    {s.label}
+                  </a>
+                ))}
+            </div>
           </div>
 
-          <div className="mt-7 flex items-center justify-center gap-4 md:justify-start">
-            {socials.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target={s.href.startsWith("http") ? "_blank" : undefined}
-                rel="noopener noreferrer"
-                aria-label={s.label}
-                className="text-muted transition-colors hover:text-accent"
-              >
-                <SocialGlyph icon={s.icon} className="h-5 w-5" />
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <div className="animate-fade-up relative shrink-0">
-          <div className="absolute inset-0 -z-10 translate-x-3 translate-y-3 rounded-3xl bg-accent/20" />
           <Image
             src={site.photo}
             alt={site.name}
-            width={260}
-            height={260}
+            width={150}
+            height={150}
             priority
-            className="h-44 w-44 rounded-3xl border border-border object-cover sm:h-60 sm:w-60"
+            className="h-28 w-28 shrink-0 rounded-full border border-border object-cover grayscale sm:h-32 sm:w-32"
           />
         </div>
+
+        <p className="mt-8 leading-relaxed text-foreground/85">{site.tagline}</p>
       </div>
     </section>
   );

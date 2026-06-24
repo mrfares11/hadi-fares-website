@@ -9,10 +9,9 @@ export function Gallery() {
   return (
     <Section id="gallery" eyebrow="For fun" title="Drone photography">
       <Reveal>
-        <p className="-mt-6 mb-10 max-w-xl text-muted">
+        <p className="mb-8 leading-relaxed text-foreground/80">
           When I&apos;m not building robots, I fly drones and shoot nature from
-          above. No client work here — just shots I like, free to use as
-          wallpapers.
+          above. Not research — just shots I like, free to use as wallpapers.
         </p>
       </Reveal>
 

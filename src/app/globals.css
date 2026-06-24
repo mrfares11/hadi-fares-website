@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 /* ===========================================================================
-   Monochrome design tokens — black / white / grey. No accent color.
+   Monochrome academic theme — black / white / grey only. No accent color.
    =========================================================================== */
 :root {
   --background: #ffffff;
-  --foreground: #141414;
-  --muted: #6f6f6f;
-  --card: #f5f5f5;
-  --border: #e4e4e4;
-  --accent: #141414; /* emphasis = near-black (mono) */
-  --accent-soft: #efefef;
-  --accent-ink: #ffffff; /* text on accent backgrounds */
+  --foreground: #1a1a1a;
+  --muted: #666666;
+  --card: #f6f6f6;
+  --border: #e2e2e2;
+  --accent: #1a1a1a; /* emphasis = near-black (mono) */
+  --accent-soft: #f0f0f0;
+  --accent-ink: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --muted: #8a8a8a;
-    --card: #151515;
-    --border: #262626;
-    --accent: #ededed;
-    --accent-soft: #1d1d1d;
-    --accent-ink: #0a0a0a;
+    --background: #0d0d0d;
+    --foreground: #e8e8e8;
+    --muted: #8c8c8c;
+    --card: #161616;
+    --border: #272727;
+    --accent: #e8e8e8;
+    --accent-soft: #1c1c1c;
+    --accent-ink: #0d0d0d;
   }
 }
 
@@ -36,13 +36,13 @@
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
   --color-accent-ink: var(--accent-ink);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem; /* offset for fixed nav when jumping to anchors */
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -52,11 +52,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Subtle entrance animation, respects reduced-motion */
+.font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;

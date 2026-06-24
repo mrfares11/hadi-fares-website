@@ -14,16 +14,18 @@ export function Section({
   className?: string;
 }) {
   return (
-    <section id={id} className={`px-5 py-20 ${className}`}>
-      <div className="mx-auto max-w-5xl">
+    <section id={id} className={`px-5 py-12 ${className}`}>
+      <div className="mx-auto max-w-3xl">
         <Reveal>
-          <div className="mb-10">
-            {eyebrow && (
-              <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">
-                {eyebrow}
-              </p>
-            )}
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
+          <div className="mb-7 border-b border-border pb-2">
+            <h2 className="font-serif text-2xl font-medium tracking-tight">
+              {title}
+              {eyebrow && (
+                <span className="ml-2 align-middle text-sm font-normal italic text-muted">
+                  — {eyebrow}
+                </span>
+              )}
+            </h2>
           </div>
         </Reveal>
         {children}
