@@ -132,6 +132,7 @@ export const projects: Project[] = [
     description:
       "Visual localization system for drones flying without GPS. Autonomous window sizing and correlation-based orientation detection achieve 97% accuracy at 59 FPS on preprocessed satellite maps. MobileNet-V3 embeddings with FAISS similarity search, validated across 75,000 test frames and outperforming transformer methods. Journal paper submitted for publication.",
     tags: ["Python", "PyTorch", "FAISS", "RLHF", "OpenCV"],
+    image: "/projects/gps-denied-navigation.png",
     featured: true,
   },
   {
