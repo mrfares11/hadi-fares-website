@@ -103,17 +103,6 @@ export const experience: Experience[] = [
       "Contribute to projects merging drones and aerial robotics with advanced AI — applying large language models (LLMs), neural networks, reinforcement learning (RL), and RLHF to autonomous systems.",
   },
   {
-    role: "Co-Founder & Engineering Lead",
-    company: "AEROClean — Autonomous Window-Cleaning Startup",
-    period: "Jan 2024 — Present",
-    location: "Beirut, Lebanon",
-    description:
-      "Designing autonomous drone systems for cleaning high-rise buildings, integrating LiDAR, cameras, and IMU sensors for precise navigation and positioning control.",
-    highlights: [
-      "Implement flight-control algorithms and sensor-fusion techniques for stable autonomous operation.",
-    ],
-  },
-  {
     role: "Head of JEDIs (Junior Engineering Design Innovators)",
     company: "AUB Makerspaces — Red Room",
     period: "Sep 2024 — Present",
