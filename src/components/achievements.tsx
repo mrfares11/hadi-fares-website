@@ -5,7 +5,11 @@ import { ArrowUpRightIcon } from "@/components/icons";
 
 export function Achievements() {
   return (
-    <Section id="achievements" eyebrow="Achievements" title="Awards & recognition">
+    <Section
+      id="achievements"
+      eyebrow="Achievements"
+      title="Honors, awards & certifications"
+    >
       <div className="grid gap-4 sm:grid-cols-2">
         {achievements.map((a, i) => {
           const Wrapper = a.link ? "a" : "div";

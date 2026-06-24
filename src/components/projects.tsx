@@ -4,6 +4,16 @@ import { Reveal } from "@/components/reveal";
 import { projects } from "@/data/content";
 import { ArrowUpRightIcon, GitHubIcon } from "@/components/icons";
 
+// Gradient palettes used for the placeholder banner when a project has no image yet.
+const gradients = [
+  "from-indigo-500 to-cyan-500",
+  "from-violet-600 to-pink-500",
+  "from-sky-500 to-emerald-500",
+  "from-orange-500 to-rose-500",
+  "from-fuchsia-600 to-indigo-500",
+  "from-teal-500 to-blue-600",
+];
+
 export function Projects() {
   return (
     <Section id="projects" eyebrow="Projects" title="Things I've built">
@@ -15,12 +25,12 @@ export function Projects() {
                 p.featured ? "sm:col-span-2" : ""
               }`}
             >
-              {p.image && (
-                <div
-                  className={`relative w-full overflow-hidden bg-accent-soft ${
-                    p.featured ? "aspect-[2.4/1]" : "aspect-[16/10]"
-                  }`}
-                >
+              <div
+                className={`relative w-full overflow-hidden ${
+                  p.featured ? "aspect-[2.4/1]" : "aspect-[16/10]"
+                }`}
+              >
+                {p.image ? (
                   <Image
                     src={p.image}
                     alt={p.title}
@@ -28,8 +38,18 @@ export function Projects() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, 50vw"
                   />
-                </div>
-              )}
+                ) : (
+                  <div
+                    className={`flex h-full w-full items-end bg-gradient-to-br ${
+                      gradients[i % gradients.length]
+                    } p-5`}
+                  >
+                    <span className="text-lg font-semibold text-white/95 drop-shadow-sm">
+                      {p.title}
+                    </span>
+                  </div>
+                )}
+              </div>
               <div className="flex flex-1 flex-col p-6">
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="text-lg font-semibold">{p.title}</h3>

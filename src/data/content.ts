@@ -1,32 +1,29 @@
 // ============================================================================
 //  ALL YOUR WEBSITE CONTENT LIVES HERE.
-//  Edit this one file to update the entire site. Replace the PLACEHOLDER
-//  values below with your real info. Images go in the /public folder and are
+//  Edit this one file to update the entire site. Images go in /public and are
 //  referenced by path, e.g. "/profile.jpg" -> public/profile.jpg
 // ============================================================================
 
 export const site = {
-  // Used for the browser tab, SEO and social share previews
-  name: "Your Name",
-  role: "Your Title / Role",
-  // Short one-liner shown under your name in the hero
-  tagline: "A short sentence about what you do and what you care about.",
-  // Longer description for SEO / social cards
+  name: "Hadi Fares",
+  role: "Aerial Robotics & Autonomous Systems Researcher",
+  tagline:
+    "Mechanical engineering student building autonomous drones and AI-driven robotics — from GPS-denied navigation and computer vision to eVTOL flight.",
   description:
-    "Personal website of Your Name — Your Title. Projects, experience and achievements.",
-  // Profile photo: drop the file in /public and put its path here (e.g. "/profile.jpg")
+    "Hadi Fares — Mechanical Engineering student at the American University of Beirut and aerial robotics researcher. Autonomous drones, computer vision, AI/ML, and GNC. Projects, publications, and achievements.",
+  // Drop your photo in /public and update this path (e.g. "/profile.jpg")
   photo: "/profile.svg",
-  // Optional: a resume/CV PDF placed in /public
+  // Drop your CV PDF in /public as resume.pdf (or change this path)
   resume: "/resume.pdf",
-  location: "City, Country",
-  email: "you@example.com",
+  location: "Beirut, Lebanon",
+  email: "hadifares0101@gmail.com",
 };
 
 export const socials: { label: string; href: string; icon: SocialIcon }[] = [
-  { label: "LinkedIn", href: "https://linkedin.com/in/your-handle", icon: "linkedin" },
-  { label: "GitHub", href: "https://github.com/your-handle", icon: "github" },
-  { label: "Email", href: "mailto:you@example.com", icon: "email" },
-  // { label: "Twitter", href: "https://x.com/your-handle", icon: "twitter" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/hadi", icon: "linkedin" },
+  { label: "Email", href: "mailto:hadifares0101@gmail.com", icon: "email" },
+  // Add your GitHub / Google Scholar handles when ready:
+  // { label: "GitHub", href: "https://github.com/your-handle", icon: "github" },
   // { label: "Google Scholar", href: "https://scholar.google.com/...", icon: "scholar" },
 ];
 
@@ -38,49 +35,91 @@ export type SocialIcon =
   | "scholar"
   | "link";
 
-// Short paragraphs for the About section
 export const about: string[] = [
-  "Write a paragraph about who you are, your background and what drives you. This is the place to give visitors a sense of your story.",
-  "Add a second paragraph about your focus areas, the kind of problems you like to solve, and what you are looking for next.",
+  "I'm a Mechanical Engineering student at the American University of Beirut (4.0/4.0 GPA), focused on autonomous aerial robotics and the AI that makes it intelligent. I work at the intersection of perception, navigation, and control — building drones and robots that sense, decide, and act on their own.",
+  "From GPS-denied visual localization and computer vision to reinforcement learning and eVTOL guidance, navigation & control, I like turning hard, time-sensitive problems into systems that actually fly. I currently research with Cranfield University's CraneAERO team — one of 11 global winners of the GoAERO Challenge — and across AUB's Aerial Robotics and AI/ML labs.",
+  "I believe the best learning happens by building. Whether it's a balloon-popping drone, a wind-tunnel instrumentation rig, or a machine that recycles plastic bottles into 3D-printing filament, I'm happiest with a hard problem and a team to solve it with.",
 ];
 
-// Quick stats / highlights shown as a row of numbers (optional — leave empty [])
 export const stats: { value: string; label: string }[] = [
-  { value: "5+", label: "Years experience" },
-  { value: "10+", label: "Projects shipped" },
-  { value: "3", label: "Awards" },
+  { value: "4.0", label: "GPA / 4.0" },
+  { value: "8+", label: "Projects built" },
+  { value: "2", label: "Publications" },
+  { value: "1 of 11", label: "GoAERO global winners" },
 ];
 
 export type Experience = {
   role: string;
   company: string;
-  period: string; // e.g. "2022 — Present"
+  period: string;
   location?: string;
   description: string;
   highlights?: string[];
-  logo?: string; // optional /public path
+  logo?: string;
 };
 
 export const experience: Experience[] = [
   {
-    role: "Your Job Title",
-    company: "Company Name",
-    period: "2023 — Present",
-    location: "City, Country",
+    role: "GNC Research Assistant — CraneAERO Team",
+    company: "Cranfield University",
+    period: "Jan 2026 — Present",
+    location: "United Kingdom",
     description:
-      "One or two sentences describing your role and impact at this company.",
+      "Member of CraneAERO, one of 11 global winners of the GoAERO Challenge, developing the CRANE (Cranfield Rapid Aerial Network for Emergency) autonomous eVTOL aircraft for search-and-rescue, disaster relief, and medical evacuation missions.",
     highlights: [
-      "A key accomplishment with a measurable result.",
-      "Another responsibility or achievement.",
+      "Contribute to guidance, navigation & control (GNC) design for autonomous VTOL flight.",
+      "Support safety, mission-readiness, and performance objectives for the eVTOL platform.",
     ],
   },
   {
-    role: "Previous Title",
-    company: "Previous Company",
-    period: "2021 — 2023",
-    location: "City, Country",
-    description: "What you did here and why it mattered.",
-    highlights: ["Notable achievement.", "Another highlight."],
+    role: "Computer Vision & Embedded Systems Intern",
+    company: "Oreyeon",
+    period: "Jun 2026 — Present",
+    description:
+      "Developing computer vision and embedded systems solutions, integrating perception pipelines with real-time hardware platforms.",
+  },
+  {
+    role: "Undergraduate Research Assistant — Aerial Robotics Lab",
+    company: "American University of Beirut",
+    period: "Jul 2024 — Present",
+    location: "Beirut, Lebanon",
+    description:
+      "Develop autonomous UAV systems spanning perception, navigation, and flight control across multiple advanced research projects in vision-based localization, multi-sensor fusion, and deep learning.",
+    highlights: [
+      "Built an autonomous firefighting fixed-wing UAV with onboard fire detection and solution dispersal.",
+      "Developing a high-speed racing drone currently in testing, aiming for a world record.",
+    ],
+  },
+  {
+    role: "Undergraduate Research Assistant — AI & Machine Learning Lab",
+    company: "American University of Beirut",
+    period: "Jul 2024 — Present",
+    location: "Beirut, Lebanon",
+    description:
+      "Contribute to projects merging drones and aerial robotics with advanced AI — applying large language models (LLMs), neural networks, reinforcement learning (RL), and RLHF to autonomous systems.",
+  },
+  {
+    role: "Co-Founder & Engineering Lead",
+    company: "AEROClean — Autonomous Window-Cleaning Startup",
+    period: "Jan 2024 — Present",
+    location: "Beirut, Lebanon",
+    description:
+      "Designing autonomous drone systems for cleaning high-rise buildings, integrating LiDAR, cameras, and IMU sensors for precise navigation and positioning control.",
+    highlights: [
+      "Implement flight-control algorithms and sensor-fusion techniques for stable autonomous operation.",
+    ],
+  },
+  {
+    role: "Head of JEDIs (Junior Engineering Design Innovators)",
+    company: "AUB Makerspaces — Red Room",
+    period: "Sep 2024 — Present",
+    location: "Beirut, Lebanon",
+    description:
+      "Lead engineering projects with students and professors, specializing in fabrication, electronics, and circuit design using advanced manufacturing tools.",
+    highlights: [
+      "Manage Red Room operations, coordinate the JEDI team, and organize all makerspace events and workshops.",
+      "Developed carbon-fiber-reinforced composites from recycled plastic bottles with optimized 3D-printing parameters.",
+    ],
   },
 ];
 
@@ -88,36 +127,61 @@ export type Project = {
   title: string;
   description: string;
   tags: string[];
-  image?: string; // /public path
-  link?: string; // live demo / page
-  repo?: string; // source code
+  image?: string; // /public path — leave undefined to show a gradient placeholder
+  link?: string;
+  repo?: string;
   featured?: boolean;
 };
 
 export const projects: Project[] = [
   {
-    title: "Project One",
+    title: "Real-Time GPS-Denied Drone Navigation",
     description:
-      "A clear, compelling description of what this project is and what makes it interesting.",
-    tags: ["React", "TypeScript", "Node"],
-    image: "/projects/project-one.svg",
-    link: "https://example.com",
-    repo: "https://github.com/your-handle/project-one",
+      "Visual localization system for drones flying without GPS. Autonomous window sizing and correlation-based orientation detection achieve 97% accuracy at 59 FPS on preprocessed satellite maps. MobileNet-V3 embeddings with FAISS similarity search, validated across 75,000 test frames and outperforming transformer methods. Journal paper submitted for publication.",
+    tags: ["Python", "PyTorch", "FAISS", "RLHF", "OpenCV"],
     featured: true,
   },
   {
-    title: "Project Two",
-    description: "Describe the problem this solves and your contribution.",
-    tags: ["Python", "ML"],
-    image: "/projects/project-two.svg",
-    repo: "https://github.com/your-handle/project-two",
+    title: "Autonomous Balloon-Popping Drone",
+    description:
+      "Autonomous drone using an onboard camera and ultrasonic sensors for real-time navigation, target detection, and approach control. YOLO-based red-balloon detection with lock-on tracking and autonomous path planning actuates a robotic arm for interception. Simulated in AirSim, deployed on hardware via ArduPilot and Raspberry Pi.",
+    tags: ["Python", "YOLOv11", "ROS", "AirSim", "ArduPilot", "Raspberry Pi"],
   },
   {
-    title: "Project Three",
-    description: "Another project worth showcasing.",
-    tags: ["Design", "Next.js"],
-    image: "/projects/project-three.svg",
-    link: "https://example.com",
+    title: "JetTracker AI",
+    description:
+      "Real-time fighter-jet tracking system using LSTM networks and OpenCV to predict the jet's center position in each video frame, with reinforcement learning for optimal path planning of an autonomous interceptor. Deployed as a dockerized web application.",
+    tags: ["Python", "PyTorch", "LSTM", "Reinforcement Learning", "Flask"],
+  },
+  {
+    title: "Wind Tunnel Instrumentation System",
+    description:
+      "Precision aerodynamic measurement system using PLC-controlled load cells to measure lift and drag on custom airfoils. A CNN trained with RLHF improves angle-of-attack prediction to 97% accuracy. Built a Flask web dashboard for real-time airfoil analysis and validated flow-straightener designs with ANSYS CFD.",
+    tags: ["PLC", "CNN", "RLHF", "ANSYS CFD", "Flask"],
+  },
+  {
+    title: "Autonomous Urban Service Robot",
+    description:
+      "ROS 2 service robot simulated in Gazebo that autonomously maps an unknown town, then accepts multi-step missions via a custom GUI — supermarket runs, food delivery, and fire-emergency response. Handles dynamic obstacles with real-time replanning and recovery behaviors.",
+    tags: ["ROS 2", "Gazebo", "Path Planning", "Nav2"],
+  },
+  {
+    title: "HVAC Leak-Detection Spider Robot",
+    description:
+      "Spider-inspired robot with camera-based computer vision and environmental sensors to detect leaks inside HVAC duct systems, then dispenses expanding foam to seal them. Designed and coded in under 20 hours — first prize at the 'Build It' hackathon.",
+    tags: ["Computer Vision", "Soft Robotics", "Embedded Systems"],
+  },
+  {
+    title: "Plastic-to-Filament Recycler for 3D Printing",
+    description:
+      "Sustainable machine that converts used plastic bottles into 3D-printing filament, enabling eco-conscious prototyping at AUB's Makerspace. Reduces plastic waste and lets students create new parts from recycled PET. Featured by MSFEA as 'Made in MSFEA'.",
+    tags: ["AutoCAD", "3D Printing", "Materials"],
+  },
+  {
+    title: "Self-Balancing Stair-Climbing Delivery Robot",
+    description:
+      "Self-balancing, stair-climbing robot for indoor restaurants that delivers food while keeping plates perfectly horizontal using real-time IMU feedback and PID control, adapting dynamically to slopes and stair inclines.",
+    tags: ["Simulink", "IMU", "PID Control"],
   },
 ];
 
@@ -131,20 +195,77 @@ export type Achievement = {
 
 export const achievements: Achievement[] = [
   {
-    title: "Award or Achievement Name",
-    issuer: "Issuing Organization",
-    year: "2024",
-    description: "A short note about what this recognizes.",
-    link: "https://example.com",
+    title: "GoAERO Challenge — Global Winner (1 of 11)",
+    issuer: "GoAERO · CraneAERO, Cranfield University",
+    year: "2026",
+    description:
+      "Selected among 11 global winners developing the CRANE autonomous eVTOL aircraft for emergency response.",
   },
   {
-    title: "Certification / Honor",
-    issuer: "Organization",
+    title: "Dean's Honor List",
+    issuer: "Maroun Semaan Faculty of Engineering & Architecture, AUB",
+    year: "2023 — Present",
+    description: "Placed on the Dean's Honor List every semester since enrollment (GPA 4.00/4.00).",
+  },
+  {
+    title: "First Prize — 'Build It' Hackathon",
+    issuer: "AUB",
+    year: "2024",
+    description:
+      "HVAC leak-detection spider robot, fully designed and coded in under 20 hours.",
+  },
+  {
+    title: "First Place — Racing Boat Speed Competition",
+    issuer: "MECH 421, AUB",
+    year: "2024",
+    description: "Designed and built a racing boat using multiple manufacturing techniques.",
+  },
+  {
+    title: "Gagnant du défi DELF 2023",
+    issuer: "Organisation internationale de la Francophonie",
     year: "2023",
+    description:
+      "Top ten students in Lebanon for the DELF B2 exam — awarded a trip to France.",
+  },
+  {
+    title: "Advanced Learning Algorithms",
+    issuer: "Stanford Online · Certification",
+    year: "2025",
+  },
+  {
+    title: "Supervised Machine Learning: Regression & Classification",
+    issuer: "Stanford Online · Certification",
+    year: "2025",
   },
 ];
 
-// Education (optional — leave empty [] to hide the section)
+export type Publication = {
+  title: string;
+  venue: string;
+  date: string;
+  description?: string;
+  link?: string;
+};
+
+export const publications: Publication[] = [
+  {
+    title:
+      "Real-Time Elevation and Orientation-Aware Visual Localization for GNSS-Denied Drone Navigation",
+    venue: "MDPI Drones",
+    date: "Jun 2026",
+    description:
+      "Visual localization for GPS-denied UAV navigation achieving 97% accuracy at 59 FPS, validated across 75,000 frames.",
+  },
+  {
+    title:
+      "THC Vape Use Patterns and Device Features: Observations from User-Posted Videos",
+    venue: "Research Publication",
+    date: "Dec 2025",
+    description:
+      "A study characterizing how people actually use THC vaping devices, drawn from user-posted video data.",
+  },
+];
+
 export const education: {
   degree: string;
   school: string;
@@ -152,16 +273,42 @@ export const education: {
   note?: string;
 }[] = [
   {
-    degree: "Your Degree, Field of Study",
-    school: "University Name",
-    period: "2017 — 2021",
-    note: "Optional honors, GPA or focus.",
+    degree: "B.E. in Mechanical Engineering",
+    school: "American University of Beirut",
+    period: "Aug 2023 — May 2027",
+    note: "GPA 4.0/4.0 · Dean's Honor List every semester.",
   },
 ];
 
-// Skills grouped by category (optional)
+// Leadership & extracurricular involvement (compact list)
+export const involvement: { role: string; org: string; period?: string }[] = [
+  { role: "Vice President", org: "AUB Automotive Club", period: "2024 — Present" },
+  { role: "Technical Lead", org: "AUB Robotics Club", period: "2024 — 2025" },
+  { role: "Drone Pilot-Guide", org: "Nature Adventure Community", period: "2025 — Present" },
+  { role: "Public Relations Specialist", org: "AEE AUB Student Chapter", period: "2025 — 2026" },
+  { role: "Community Volunteer", org: "Children's Cancer Center of Lebanon (CCCL)" },
+];
+
 export const skills: { category: string; items: string[] }[] = [
-  { category: "Languages", items: ["TypeScript", "Python", "JavaScript"] },
-  { category: "Frameworks", items: ["React", "Next.js", "Node.js"] },
-  { category: "Tools", items: ["Git", "Docker", "Figma"] },
+  { category: "Languages", items: ["Python", "C/C++", "JavaScript", "HTML/CSS", "Arduino"] },
+  {
+    category: "Robotics & Sim",
+    items: ["ROS", "Gazebo", "PX4 Autopilot", "AirSim", "MATLAB/Simulink"],
+  },
+  {
+    category: "Machine Learning",
+    items: ["PyTorch", "TensorFlow", "YOLO", "RLHF", "OpenCV", "LSTM / CNN", "FAISS"],
+  },
+  {
+    category: "Autonomy",
+    items: ["Visual Localization", "Sensor Fusion", "Path Planning", "Flight Control", "GPS-Denied Nav"],
+  },
+  {
+    category: "Design & Tools",
+    items: ["SolidWorks", "Fusion 360", "ANSYS", "AutoCAD", "Git", "Docker", "LabVIEW"],
+  },
+  {
+    category: "Hardware",
+    items: ["IMU", "GPS", "Flight Controllers", "LiDAR / Radar", "Load Cells", "PLC", "Raspberry Pi", "3D Printing"],
+  },
 ];
