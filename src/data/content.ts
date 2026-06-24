@@ -8,7 +8,7 @@ export const site = {
   name: "Hadi Fares",
   role: "Aerial Robotics & Autonomous Systems Researcher",
   tagline:
-    "Mechanical engineering student building autonomous drones and AI-driven robotics — from GPS-denied navigation and computer vision to eVTOL flight.",
+    "Mechanical engineering student and aerial-robotics researcher — designing and building autonomous drones from scratch, and the AI that flies them.",
   description:
     "Hadi Fares — Mechanical Engineering student at the American University of Beirut and aerial robotics researcher. Autonomous drones, computer vision, AI/ML, and GNC. Projects, publications, and achievements.",
   // Drop your photo in /public and update this path (e.g. "/profile.jpg")
@@ -21,10 +21,14 @@ export const site = {
 
 export const socials: { label: string; href: string; icon: SocialIcon }[] = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/hadi-fares/", icon: "linkedin" },
+  {
+    label: "Google Scholar",
+    href: "https://scholar.google.com/citations?hl=en&user=pcoOCjUAAAAJ",
+    icon: "scholar",
+  },
   { label: "Email", href: "mailto:hnf01@mail.aub.edu", icon: "email" },
-  // Add GitHub / Google Scholar later when ready:
+  // Add GitHub later when ready:
   // { label: "GitHub", href: "https://github.com/your-handle", icon: "github" },
-  // { label: "Google Scholar", href: "https://scholar.google.com/...", icon: "scholar" },
 ];
 
 export type SocialIcon =
@@ -36,9 +40,9 @@ export type SocialIcon =
   | "link";
 
 export const about: string[] = [
-  "I'm a Mechanical Engineering student at the American University of Beirut (4.0/4.0 GPA), focused on autonomous aerial robotics and the AI that makes it intelligent. I work at the intersection of perception, navigation, and control — building drones and robots that sense, decide, and act on their own.",
-  "From GPS-denied visual localization and computer vision to reinforcement learning and eVTOL guidance, navigation & control, I like turning hard, time-sensitive problems into systems that actually fly. I currently research with Cranfield University's CraneAERO team — one of 11 global winners of the GoAERO Challenge — and across AUB's Aerial Robotics and AI/ML labs.",
-  "I believe the best learning happens by building. Whether it's a balloon-popping drone, a wind-tunnel instrumentation rig, or a machine that recycles plastic bottles into 3D-printing filament, I'm happiest with a hard problem and a team to solve it with.",
+  "I'm a Mechanical Engineering student at the American University of Beirut and an aerial-robotics researcher. I build drones from scratch — mechanical design, electronics, control systems, and full autonomy — together with the AI that makes them intelligent.",
+  "My work spans reinforcement learning, computer vision, and autonomous systems across a wide range of projects in AUB's Aerial Robotics and AI/ML labs — from firefighting fixed-wing UAVs and high-speed racing drones to perception, navigation, and flight-control research. I also contribute to Cranfield University's CraneAERO team.",
+  "I believe the best learning happens by building. Whether it's a drone, a wind-tunnel rig, or a machine that recycles plastic into 3D-printing filament, I'm happiest with a hard problem and a team to solve it with.",
 ];
 
 export const stats: { value: string; label: string }[] = [

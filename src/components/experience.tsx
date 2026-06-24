@@ -10,17 +10,13 @@ export function ExperienceSection() {
           label="Professional Experience"
           title="Where work shaped expertise."
           subtitle="Roles across aerial robotics, computer vision, and autonomous systems."
-          stat={{ value: String(experience.length), label: "Roles held" }}
         />
 
         <div className="border-t border-border">
           {experience.map((job, i) => (
             <Reveal key={i}>
               <div className="group grid gap-3 border-b border-border py-8 sm:grid-cols-12 sm:gap-6">
-                <div className="flex items-start gap-4 sm:col-span-8">
-                  <span className="font-sans text-sm font-bold text-muted">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
+                <div className="sm:col-span-8">
                   <div>
                     <p className="label text-muted">
                       {job.company}

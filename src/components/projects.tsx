@@ -21,7 +21,6 @@ export function Projects() {
         <SectionHeader
           label="Portfolio Projects"
           title="Real work, delivered with impact."
-          stat={{ value: String(projects.length), label: "Selected builds" }}
         />
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -58,9 +57,7 @@ export function Projects() {
 
                   {/* Content */}
                   <div className="absolute inset-0 flex flex-col justify-between p-5 text-white">
-                    <p className="label text-white/70">
-                      {String(i + 1).padStart(2, "0")} / {p.tags[0]}
-                    </p>
+                    <p className="label text-white/70">{p.tags[0]}</p>
                     <div>
                       <h3 className="font-serif text-xl font-medium uppercase leading-tight tracking-tight">
                         {p.title}

@@ -1,6 +1,5 @@
 import { SectionShell } from "@/components/section";
 import { Reveal } from "@/components/reveal";
-import { stats } from "@/data/content";
 
 export function Statement() {
   return (
@@ -13,24 +12,12 @@ export function Statement() {
         </Reveal>
 
         <Reveal delay={100}>
-          <p className="mt-8 max-w-xl text-lg text-muted">
-            From GPS-denied navigation and computer vision to eVTOL guidance, I
-            turn hard, time-sensitive problems into systems that fly.
+          <p className="mt-8 max-w-2xl text-lg text-muted">
+            I work across reinforcement learning, AI, computer vision, and aerial
+            robotics — designing and building drones from scratch, from mechanics
+            and control all the way to full autonomy.
           </p>
         </Reveal>
-
-        <div className="mt-16 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-4">
-          {stats.map((s, i) => (
-            <Reveal key={s.label} delay={i * 80}>
-              <div>
-                <p className="font-sans text-5xl font-extrabold tracking-tight sm:text-6xl">
-                  {s.value}
-                </p>
-                <p className="label mt-2 text-muted">{s.label}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
       </div>
     </SectionShell>
   );
