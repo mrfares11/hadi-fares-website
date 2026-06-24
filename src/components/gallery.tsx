@@ -12,7 +12,7 @@ export function Gallery() {
         <SectionHeader
           label="For fun"
           title="Drone photography."
-          subtitle="Not research — just shots I like from above. Free to use as wallpapers."
+          subtitle="Not research, just shots I like from above. Free to use as wallpapers."
         />
 
         <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">

@@ -8,9 +8,9 @@ export const site = {
   name: "Hadi Fares",
   role: "Aerial Robotics & Autonomous Systems Researcher",
   tagline:
-    "Mechanical engineering student and aerial-robotics researcher — designing and building autonomous drones from scratch, and the AI that flies them.",
+    "Mechanical engineering student and aerial-robotics researcher, designing and building autonomous drones from scratch, and the AI that flies them.",
   description:
-    "Hadi Fares — Mechanical Engineering student at the American University of Beirut and aerial robotics researcher. Autonomous drones, computer vision, AI/ML, and GNC. Projects, publications, and achievements.",
+    "Hadi Fares, Mechanical Engineering student at the American University of Beirut and aerial robotics researcher. Autonomous drones, computer vision, AI/ML, and GNC. Projects, publications, and achievements.",
   // Drop your photo in /public and update this path (e.g. "/profile.jpg")
   photo: "/profile.jpg",
   // Drop your CV PDF in /public as resume.pdf (or change this path)
@@ -40,8 +40,8 @@ export type SocialIcon =
   | "link";
 
 export const about: string[] = [
-  "I'm a Mechanical Engineering student at the American University of Beirut and an aerial-robotics researcher. I build drones from scratch — mechanical design, electronics, control systems, and full autonomy — together with the AI that makes them intelligent.",
-  "My work spans reinforcement learning, computer vision, and autonomous systems across a wide range of projects in AUB's Aerial Robotics and AI/ML labs — from firefighting fixed-wing UAVs and high-speed racing drones to perception, navigation, and flight-control research. I also contribute to Cranfield University's CraneAERO team.",
+  "I'm a Mechanical Engineering student at the American University of Beirut and an aerial-robotics researcher. I build drones from scratch, from mechanical design and electronics to control systems and full autonomy, together with the AI that makes them intelligent.",
+  "My work spans reinforcement learning, computer vision, and autonomous systems across a wide range of projects in AUB's Aerial Robotics and AI/ML labs, from firefighting fixed-wing UAVs and high-speed racing drones to perception, navigation, and flight-control research. I also contribute to Cranfield University's CraneAERO team.",
   "I believe the best learning happens by building. Whether it's a drone, a wind-tunnel rig, or a machine that recycles plastic into 3D-printing filament, I'm happiest with a hard problem and a team to solve it with.",
 ];
 
@@ -64,9 +64,9 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    role: "GNC Research Assistant — CraneAERO Team",
+    role: "GNC Research Assistant, CraneAERO Team",
     company: "Cranfield University",
-    period: "Jan 2026 — Present",
+    period: "Jan 2026 - Present",
     location: "United Kingdom",
     description:
       "Member of CraneAERO, one of 11 global winners of the GoAERO Challenge, developing the CRANE (Cranfield Rapid Aerial Network for Emergency) autonomous eVTOL aircraft for search-and-rescue, disaster relief, and medical evacuation missions.",
@@ -78,14 +78,14 @@ export const experience: Experience[] = [
   {
     role: "Computer Vision & Embedded Systems Intern",
     company: "Oreyeon",
-    period: "Jun 2026 — Present",
+    period: "Jun 2026 - Present",
     description:
       "Developing computer vision and embedded systems solutions, integrating perception pipelines with real-time hardware platforms.",
   },
   {
-    role: "Undergraduate Research Assistant — Aerial Robotics Lab",
+    role: "Undergraduate Research Assistant, Aerial Robotics Lab",
     company: "American University of Beirut",
-    period: "Jul 2024 — Present",
+    period: "Jul 2024 - Present",
     location: "Beirut, Lebanon",
     description:
       "Develop autonomous UAV systems spanning perception, navigation, and flight control across multiple advanced research projects in vision-based localization, multi-sensor fusion, and deep learning.",
@@ -95,17 +95,17 @@ export const experience: Experience[] = [
     ],
   },
   {
-    role: "Undergraduate Research Assistant — AI & Machine Learning Lab",
+    role: "Undergraduate Research Assistant, AI & Machine Learning Lab",
     company: "American University of Beirut",
-    period: "Jul 2024 — Present",
+    period: "Jul 2024 - Present",
     location: "Beirut, Lebanon",
     description:
-      "Contribute to projects merging drones and aerial robotics with advanced AI — applying large language models (LLMs), neural networks, reinforcement learning (RL), and RLHF to autonomous systems.",
+      "Contribute to projects merging drones and aerial robotics with advanced AI, applying large language models (LLMs), neural networks, reinforcement learning (RL), and RLHF to autonomous systems.",
   },
   {
     role: "Head of JEDIs (Junior Engineering Design Innovators)",
-    company: "AUB Makerspaces — Red Room",
-    period: "Sep 2024 — Present",
+    company: "AUB Makerspaces, Red Room",
+    period: "Sep 2024 - Present",
     location: "Beirut, Lebanon",
     description:
       "Lead engineering projects with students and professors, specializing in fabrication, electronics, and circuit design using advanced manufacturing tools.",
@@ -158,13 +158,13 @@ export const projects: Project[] = [
   {
     title: "Autonomous Urban Service Robot",
     description:
-      "ROS 2 service robot simulated in Gazebo that autonomously maps an unknown town, then accepts multi-step missions via a custom GUI — supermarket runs, food delivery, and fire-emergency response. Handles dynamic obstacles with real-time replanning and recovery behaviors.",
+      "ROS 2 service robot simulated in Gazebo that autonomously maps an unknown town, then accepts multi-step missions via a custom GUI: supermarket runs, food delivery, and fire-emergency response. Handles dynamic obstacles with real-time replanning and recovery behaviors.",
     tags: ["ROS 2", "Gazebo", "Path Planning", "Nav2"],
   },
   {
     title: "HVAC Leak-Detection Spider Robot",
     description:
-      "Spider-inspired robot with camera-based computer vision and environmental sensors to detect leaks inside HVAC duct systems, then dispenses expanding foam to seal them. Designed and coded in under 20 hours — first prize at the 'Build It' hackathon.",
+      "Spider-inspired robot with camera-based computer vision and environmental sensors to detect leaks inside HVAC duct systems, then dispenses expanding foam to seal them. Designed and coded in under 20 hours, winning first prize at the 'Build It' hackathon.",
     tags: ["Computer Vision", "Soft Robotics", "Embedded Systems"],
     image: "/projects/spider-robot.jpg",
   },
@@ -201,7 +201,7 @@ export type Achievement = {
 
 export const achievements: Achievement[] = [
   {
-    title: "GoAERO Challenge — Global Winner (1 of 11)",
+    title: "GoAERO Challenge, Global Winner",
     issuer: "GoAERO · CraneAERO, Cranfield University",
     year: "2026",
     description:
@@ -210,18 +210,18 @@ export const achievements: Achievement[] = [
   {
     title: "Dean's Honor List",
     issuer: "Maroun Semaan Faculty of Engineering & Architecture, AUB",
-    year: "2023 — Present",
+    year: "2023 - Present",
     description: "Placed on the Dean's Honor List every semester since enrollment (GPA 4.00/4.00).",
   },
   {
-    title: "First Prize — 'Build It' Hackathon",
+    title: "First Prize, 'Build It' Hackathon",
     issuer: "AUB",
     year: "2024",
     description:
       "HVAC leak-detection spider robot, fully designed and coded in under 20 hours.",
   },
   {
-    title: "First Place — Racing Boat Speed Competition",
+    title: "First Place, Racing Boat Speed Competition",
     issuer: "MECH 421, AUB",
     year: "2024",
     description: "Designed and built a racing boat using multiple manufacturing techniques.",
@@ -231,7 +231,7 @@ export const achievements: Achievement[] = [
     issuer: "Organisation internationale de la Francophonie",
     year: "2023",
     description:
-      "Top ten students in Lebanon for the DELF B2 exam — awarded a trip to France.",
+      "Top ten students in Lebanon for the DELF B2 exam, awarded a trip to France.",
   },
   {
     title: "Advanced Learning Algorithms",
@@ -281,17 +281,17 @@ export const education: {
   {
     degree: "B.E. in Mechanical Engineering",
     school: "American University of Beirut",
-    period: "Aug 2023 — May 2027",
+    period: "Aug 2023 - May 2027",
     note: "GPA 4.0/4.0 · Dean's Honor List every semester.",
   },
 ];
 
 // Leadership & extracurricular involvement (compact list)
 export const involvement: { role: string; org: string; period?: string }[] = [
-  { role: "Vice President", org: "AUB Automotive Club", period: "2024 — Present" },
-  { role: "Technical Lead", org: "AUB Robotics Club", period: "2024 — 2025" },
-  { role: "Drone Pilot-Guide", org: "Nature Adventure Community", period: "2025 — Present" },
-  { role: "Public Relations Specialist", org: "AEE AUB Student Chapter", period: "2025 — 2026" },
+  { role: "Vice President", org: "AUB Automotive Club", period: "2024 - Present" },
+  { role: "Technical Lead", org: "AUB Robotics Club", period: "2024 - 2025" },
+  { role: "Drone Pilot-Guide", org: "Nature Adventure Community", period: "2025 - Present" },
+  { role: "Public Relations Specialist", org: "AEE AUB Student Chapter", period: "2025 - 2026" },
   { role: "Community Volunteer", org: "Children's Cancer Center of Lebanon (CCCL)" },
 ];
 
@@ -310,25 +310,43 @@ export const gallery: Shot[] = [
 ];
 
 export const skills: { category: string; items: string[] }[] = [
-  { category: "Languages", items: ["Python", "C/C++", "JavaScript", "HTML/CSS", "Arduino"] },
   {
-    category: "Robotics & Sim",
-    items: ["ROS", "Gazebo", "PX4 Autopilot", "AirSim", "MATLAB/Simulink"],
+    category: "AI & Machine Learning",
+    items: [
+      "Reinforcement Learning",
+      "RLHF",
+      "Multi-Agent RL",
+      "Graph Neural Networks",
+      "CNNs & LSTMs",
+      "PyTorch",
+      "TensorFlow",
+    ],
   },
   {
-    category: "Machine Learning",
-    items: ["PyTorch", "TensorFlow", "YOLO", "RLHF", "OpenCV", "LSTM / CNN", "FAISS"],
+    category: "Computer Vision",
+    items: [
+      "Visual Localization",
+      "Image Stitching",
+      "Object Detection",
+      "Super-Resolution",
+      "YOLO",
+      "OpenCV",
+    ],
   },
   {
-    category: "Autonomy",
-    items: ["Visual Localization", "Sensor Fusion", "Path Planning", "Flight Control", "GPS-Denied Nav"],
+    category: "Autonomy & Robotics",
+    items: [
+      "SLAM",
+      "Sensor Fusion",
+      "Path Planning",
+      "Flight Control",
+      "GPS-Denied Navigation",
+      "ROS 2 / Gazebo",
+      "PX4 / ArduPilot",
+    ],
   },
   {
-    category: "Design & Tools",
-    items: ["SolidWorks", "Fusion 360", "ANSYS", "AutoCAD", "Git", "Docker", "LabVIEW"],
-  },
-  {
-    category: "Hardware",
-    items: ["IMU", "GPS", "Flight Controllers", "LiDAR / Radar", "Load Cells", "PLC", "Raspberry Pi", "3D Printing"],
+    category: "Engineering & Tools",
+    items: ["Python", "C/C++", "SolidWorks", "ANSYS", "Docker", "3D Printing"],
   },
 ];

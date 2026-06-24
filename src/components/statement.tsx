@@ -14,7 +14,7 @@ export function Statement() {
         <Reveal delay={100}>
           <p className="mt-8 max-w-2xl text-lg text-muted">
             I work across reinforcement learning, AI, computer vision, and aerial
-            robotics — designing and building drones from scratch, from mechanics
+            robotics, designing and building drones from scratch, from mechanics
             and control all the way to full autonomy.
           </p>
         </Reveal>
