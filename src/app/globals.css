@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* ===========================================================================
+   Design tokens — tweak the accent color here to re-theme the whole site.
+   =========================================================================== */
+:root {
+  --background: #fbfbfd;
+  --foreground: #15161a;
+  --muted: #5b5f6b;
+  --card: #ffffff;
+  --border: #e7e8ee;
+  --accent: #4f46e5; /* indigo */
+  --accent-soft: #eef0ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b0c10;
+    --foreground: #f3f4f8;
+    --muted: #9aa0ad;
+    --card: #14161c;
+    --border: #23262f;
+    --accent: #818cf8;
+    --accent-soft: #1b1e2b;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* offset for fixed nav when jumping to anchors */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle entrance animation, respects reduced-motion */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s cubic-bezier(0.21, 0.61, 0.35, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-fade-up {
+    animation: none;
+  }
+}
