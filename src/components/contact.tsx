@@ -19,7 +19,7 @@ export function Contact() {
           </p>
           <a
             href={`mailto:${site.email}`}
-            className="mt-7 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-transform hover:-translate-y-0.5"
+            className="mt-7 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-accent-ink transition-transform hover:-translate-y-0.5"
           >
             {site.email}
           </a>

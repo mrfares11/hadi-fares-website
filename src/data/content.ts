@@ -289,6 +289,20 @@ export const involvement: { role: string; org: string; period?: string }[] = [
   { role: "Community Volunteer", org: "Children's Cancer Center of Lebanon (CCCL)" },
 ];
 
+// Drone photography — "for fun" gallery.
+// Drop wallpaper-sized shots in /public/gallery and set `src`. Leave `src`
+// empty ("") to show a neutral placeholder tile until you add the photo.
+export type Shot = { src: string; alt: string; caption?: string };
+
+export const gallery: Shot[] = [
+  { src: "", alt: "Drone shot", caption: "" },
+  { src: "", alt: "Drone shot", caption: "" },
+  { src: "", alt: "Drone shot", caption: "" },
+  { src: "", alt: "Drone shot", caption: "" },
+  { src: "", alt: "Drone shot", caption: "" },
+  { src: "", alt: "Drone shot", caption: "" },
+];
+
 export const skills: { category: string; items: string[] }[] = [
   { category: "Languages", items: ["Python", "C/C++", "JavaScript", "HTML/CSS", "Arduino"] },
   {

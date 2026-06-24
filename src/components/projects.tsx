@@ -4,14 +4,14 @@ import { Reveal } from "@/components/reveal";
 import { projects } from "@/data/content";
 import { ArrowUpRightIcon, GitHubIcon } from "@/components/icons";
 
-// Gradient palettes used for the placeholder banner when a project has no image yet.
+// Neutral greyscale banners used as a placeholder when a project has no image yet.
 const gradients = [
-  "from-indigo-500 to-cyan-500",
-  "from-violet-600 to-pink-500",
-  "from-sky-500 to-emerald-500",
-  "from-orange-500 to-rose-500",
-  "from-fuchsia-600 to-indigo-500",
-  "from-teal-500 to-blue-600",
+  "from-neutral-700 to-neutral-900",
+  "from-stone-600 to-stone-800",
+  "from-zinc-700 to-zinc-900",
+  "from-neutral-600 to-neutral-800",
+  "from-stone-700 to-stone-950",
+  "from-zinc-600 to-zinc-800",
 ];
 
 export function Projects() {

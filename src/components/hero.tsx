@@ -13,7 +13,7 @@ export function Hero() {
       <div className="mx-auto flex max-w-5xl flex-col-reverse items-center gap-10 md:flex-row md:items-center md:justify-between">
         <div className="animate-fade-up max-w-xl text-center md:text-left">
           <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted">
-            <span className="h-2 w-2 rounded-full bg-emerald-500" />
+            <span className="h-2 w-2 rounded-full bg-foreground" />
             {site.role}
           </p>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
@@ -24,7 +24,7 @@ export function Hero() {
           <div className="mt-7 flex flex-wrap items-center justify-center gap-3 md:justify-start">
             <a
               href="#projects"
-              className="inline-flex items-center gap-1.5 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-1.5 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-accent-ink transition-transform hover:-translate-y-0.5"
             >
               View my work
             </a>
