@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { SectionShell, SectionHeader } from "@/components/section";
 import { Reveal } from "@/components/reveal";
+import { ProjectImage } from "@/components/project-image";
 import { projects } from "@/data/content";
 
 const grayGradients = [
@@ -36,21 +36,11 @@ export function Projects() {
                   className="group relative block aspect-[4/5] overflow-hidden rounded-2xl border border-border"
                 >
                   {/* Visual */}
-                  {p.image ? (
-                    <Image
-                      src={p.image}
-                      alt={p.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  ) : (
-                    <div
-                      className={`h-full w-full bg-gradient-to-br ${
-                        grayGradients[i % grayGradients.length]
-                      }`}
-                    />
-                  )}
+                  <ProjectImage
+                    src={p.image}
+                    alt={p.title}
+                    gradient={grayGradients[i % grayGradients.length]}
+                  />
 
                   {/* Legibility overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />

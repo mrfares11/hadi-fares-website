@@ -12,7 +12,7 @@ export const site = {
   description:
     "Hadi Fares — Mechanical Engineering student at the American University of Beirut and aerial robotics researcher. Autonomous drones, computer vision, AI/ML, and GNC. Projects, publications, and achievements.",
   // Drop your photo in /public and update this path (e.g. "/profile.jpg")
-  photo: "/profile.svg",
+  photo: "/profile.jpg",
   // Drop your CV PDF in /public as resume.pdf (or change this path)
   resume: "/resume.pdf",
   location: "Beirut, Lebanon",
@@ -139,6 +139,7 @@ export const projects: Project[] = [
     description:
       "Autonomous drone using an onboard camera and ultrasonic sensors for real-time navigation, target detection, and approach control. YOLO-based red-balloon detection with lock-on tracking and autonomous path planning actuates a robotic arm for interception. Simulated in AirSim, deployed on hardware via ArduPilot and Raspberry Pi.",
     tags: ["Python", "YOLOv11", "ROS", "AirSim", "ArduPilot", "Raspberry Pi"],
+    image: "/projects/balloon-drone.jpg",
   },
   {
     title: "JetTracker AI",
@@ -151,6 +152,7 @@ export const projects: Project[] = [
     description:
       "Precision aerodynamic measurement system using PLC-controlled load cells to measure lift and drag on custom airfoils. A CNN trained with RLHF improves angle-of-attack prediction to 97% accuracy. Built a Flask web dashboard for real-time airfoil analysis and validated flow-straightener designs with ANSYS CFD.",
     tags: ["PLC", "CNN", "RLHF", "ANSYS CFD", "Flask"],
+    image: "/projects/wind-tunnel.jpg",
   },
   {
     title: "Autonomous Urban Service Robot",
@@ -163,18 +165,28 @@ export const projects: Project[] = [
     description:
       "Spider-inspired robot with camera-based computer vision and environmental sensors to detect leaks inside HVAC duct systems, then dispenses expanding foam to seal them. Designed and coded in under 20 hours — first prize at the 'Build It' hackathon.",
     tags: ["Computer Vision", "Soft Robotics", "Embedded Systems"],
+    image: "/projects/spider-robot.jpg",
   },
   {
     title: "Plastic-to-Filament Recycler for 3D Printing",
     description:
       "Sustainable machine that converts used plastic bottles into 3D-printing filament, enabling eco-conscious prototyping at AUB's Makerspace. Reduces plastic waste and lets students create new parts from recycled PET. Featured by MSFEA as 'Made in MSFEA'.",
     tags: ["AutoCAD", "3D Printing", "Materials"],
+    image: "/projects/recycler.jpg",
   },
   {
     title: "Self-Balancing Stair-Climbing Delivery Robot",
     description:
       "Self-balancing, stair-climbing robot for indoor restaurants that delivers food while keeping plates perfectly horizontal using real-time IMU feedback and PID control, adapting dynamically to slopes and stair inclines.",
     tags: ["Simulink", "IMU", "PID Control"],
+    image: "/projects/delivery-robot.jpg",
+  },
+  {
+    title: "Speed-Competition Racing Boat",
+    description:
+      "Designed and built a racing boat from concept to final assembly for the MECH 421 manufacturing course, using multiple manufacturing techniques. Won first place in the speed competition.",
+    tags: ["Manufacturing", "SolidWorks", "Composites"],
+    image: "/projects/boat.jpg",
   },
 ];
 

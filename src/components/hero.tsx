@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { site } from "@/data/content";
+import { HeroPortrait } from "@/components/hero-portrait";
 
 export function Hero() {
   return (
@@ -8,14 +8,7 @@ export function Hero() {
       className="theme-dark grain relative flex min-h-[100svh] flex-col justify-end overflow-hidden bg-background text-foreground"
     >
       {/* Portrait backdrop */}
-      <Image
-        src={site.photo}
-        alt={site.name}
-        fill
-        priority
-        className="object-cover object-center opacity-90 grayscale"
-        sizes="100vw"
-      />
+      <HeroPortrait src={site.photo} alt={site.name} />
       {/* Cinematic overlays for legibility */}
       <div className="absolute inset-0 z-[1] bg-gradient-to-t from-black via-black/40 to-black/70" />
       <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/70 via-transparent to-black/40" />
