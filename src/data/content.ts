@@ -16,12 +16,12 @@ export const site = {
   // Drop your CV PDF in /public as resume.pdf (or change this path)
   resume: "/resume.pdf",
   location: "Beirut, Lebanon",
-  email: "hadifares0101@gmail.com",
+  email: "hnf01@mail.aub.edu",
 };
 
 export const socials: { label: string; href: string; icon: SocialIcon }[] = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/hadi-fares/", icon: "linkedin" },
-  { label: "Email", href: "mailto:hadifares0101@gmail.com", icon: "email" },
+  { label: "Email", href: "mailto:hnf01@mail.aub.edu", icon: "email" },
   // Add GitHub / Google Scholar later when ready:
   // { label: "GitHub", href: "https://github.com/your-handle", icon: "github" },
   // { label: "Google Scholar", href: "https://scholar.google.com/...", icon: "scholar" },
@@ -45,7 +45,7 @@ export const stats: { value: string; label: string }[] = [
   { value: "4.0", label: "GPA / 4.0" },
   { value: "8+", label: "Projects built" },
   { value: "2", label: "Publications" },
-  { value: "1 of 11", label: "GoAERO global winners" },
+  { value: "5+", label: "Awards & honors" },
 ];
 
 export type Experience = {

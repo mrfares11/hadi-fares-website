@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Newsreader, Geist } from "next/font/google";
+import { Bodoni_Moda, Archivo } from "next/font/google";
 import { site } from "@/data/content";
 import "./globals.css";
 
-// Serif for headings / name — gives a scholarly, academic feel.
-const serif = Newsreader({
+// High-contrast Didone serif for the big name & section headings (dramatic).
+const serif = Bodoni_Moda({
   variable: "--font-serif",
   subsets: ["latin"],
   style: ["normal", "italic"],
 });
 
-// Clean sans for body text.
-const sans = Geist({
+// Bold grotesque for statements, labels, stats and body text.
+const sans = Archivo({
   variable: "--font-sans",
   subsets: ["latin"],
 });
@@ -36,7 +36,7 @@ export default function RootLayout({
       lang="en"
       className={`${serif.variable} ${sans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-black">{children}</body>
     </html>
   );
 }
