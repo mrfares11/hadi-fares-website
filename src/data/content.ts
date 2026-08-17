@@ -176,6 +176,11 @@ export const community: CommunityRole[] = [
     ],
     gallery: [
       {
+        src: "/community/nac-group.jpg",
+        alt: "NAC hiking group posing with the Lebanese flag on a foggy mountain trail",
+        caption: "The group at the top, flag in hand",
+      },
+      {
         src: "/community/nac-hiking.jpeg",
         alt: "Overlooking a mountain reservoir on a hike in Lebanon",
         caption: "On the trail above a mountain reservoir",
