@@ -1,14 +1,17 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { site } from "@/data/content";
 
+// Root-relative so the nav also works from subpages like /community/nac.
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Work" },
-  { href: "#publications", label: "Papers" },
-  { href: "#gallery", label: "Photos" },
+  { href: "/#about", label: "About" },
+  { href: "/#experience", label: "Experience" },
+  { href: "/#projects", label: "Work" },
+  { href: "/#publications", label: "Papers" },
+  { href: "/#community", label: "Community" },
+  { href: "/#gallery", label: "Photos" },
 ];
 
 export function Nav() {
@@ -29,27 +32,27 @@ export function Nav() {
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5">
-        <a href="#top" className="font-serif text-lg font-semibold uppercase tracking-tight">
+        <Link href="/" className="font-serif text-lg font-semibold uppercase tracking-tight">
           {site.name}
-        </a>
+        </Link>
 
         <div className="flex items-center gap-6">
           <ul className="label hidden items-center gap-6 text-white/60 md:flex">
             {links.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className="transition-colors hover:text-white">
+                <Link href={l.href} className="transition-colors hover:text-white">
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
 
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             className="label hidden rounded-full border border-white/40 px-4 py-2 transition-colors hover:border-white hover:bg-white hover:text-black sm:inline-block"
           >
             Contact me
-          </a>
+          </Link>
 
           <button
             onClick={() => setOpen((o) => !o)}
@@ -64,15 +67,15 @@ export function Nav() {
 
       {open && (
         <ul className="label flex flex-col border-t border-white/10 bg-black/95 px-5 py-2 md:hidden">
-          {[...links, { href: "#contact", label: "Contact" }].map((l) => (
+          {[...links, { href: "/#contact", label: "Contact" }].map((l) => (
             <li key={l.href}>
-              <a
+              <Link
                 href={l.href}
                 onClick={() => setOpen(false)}
                 className="block py-3 text-white/70 transition-colors hover:text-white"
               >
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

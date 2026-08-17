@@ -7,7 +7,7 @@ export function Gallery() {
   if (gallery.length === 0) return null;
 
   return (
-    <SectionShell id="gallery" theme="light" className="px-5 py-24 sm:py-32">
+    <SectionShell id="gallery" theme="dark" grain className="px-5 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           label="For fun"

@@ -102,16 +102,87 @@ export const experience: Experience[] = [
     description:
       "Contribute to projects merging drones and aerial robotics with advanced AI, applying large language models (LLMs), neural networks, reinforcement learning (RL), and RLHF to autonomous systems.",
   },
+];
+
+// ---------------------------------------------------------------------------
+// Community & Volunteering — featured roles with their own dedicated pages
+// under /community/<slug>. Card fields feed the homepage section; intro,
+// highlights, and gallery feed the dedicated page.
+// ---------------------------------------------------------------------------
+export type CommunityRole = {
+  slug: string;
+  role: string;
+  org: string;
+  period: string;
+  location?: string;
+  card: string; // short description shown on the homepage card
+  image: string; // homepage card image
+  intro: string[]; // paragraphs on the dedicated page
+  highlights: string[]; // bullet list on the dedicated page
+  gallery: Shot[]; // photo grid on the dedicated page
+};
+
+export const community: CommunityRole[] = [
   {
+    slug: "red-room",
     role: "Head of JEDIs (Junior Engineering Design Innovators)",
-    company: "AUB Makerspaces, Red Room",
+    org: "AUB Makerspaces · Red Room",
     period: "Sep 2024 - Present",
     location: "Beirut, Lebanon",
-    description:
-      "Lead engineering projects with students and professors, specializing in fabrication, electronics, and circuit design using advanced manufacturing tools.",
+    card: "Leading student engineering projects in fabrication, electronics, and circuit design — running Red Room operations and organizing every makerspace event and workshop.",
+    image: "/community/red-room-lab.jpeg",
+    intro: [
+      "The Red Room is AUB's student makerspace — a workshop where students design, prototype, and build. As Head of JEDIs (Junior Engineering Design Innovators), I lead student engineering projects in fabrication, electronics, and circuit design, manage the Red Room's day-to-day operations, and organize all of the makerspace's events and workshops.",
+      "The work is hands-on and real: from fabrication, electronics, and circuit-design projects to developing new materials with advanced manufacturing tools. One favorite: carbon-fiber-reinforced composites made from recycled plastic bottles, with 3D-printing parameters optimized for strength.",
+    ],
     highlights: [
-      "Manage Red Room operations, coordinate the JEDI team, and organize all makerspace events and workshops.",
+      "Lead student engineering projects in fabrication, electronics, and circuit design.",
+      "Manage Red Room operations and coordinate the JEDI team.",
+      "Organize all makerspace events and workshops.",
       "Developed carbon-fiber-reinforced composites from recycled plastic bottles with optimized 3D-printing parameters.",
+    ],
+    gallery: [
+      {
+        src: "/community/red-room-lab.jpeg",
+        alt: "At an electronics bench in the Red Room makerspace",
+        caption: "At the electronics bench in the Red Room",
+      },
+      {
+        src: "/projects/recycler.jpg",
+        alt: "Plastic-to-filament recycler machine",
+        caption: "Plastic-to-filament recycler for AUB's Makerspace",
+      },
+    ],
+  },
+  {
+    slug: "nac",
+    role: "Volunteer Hiking Guide & Aerial Videographer",
+    org: "Nature Adventure Club (NAC)",
+    period: "2024 - Present",
+    location: "Lebanon",
+    card: "Guiding hikes across Lebanon's mountains, valleys, and coastal trails — and flying a drone to capture the landscapes along the way.",
+    // dji-6 rather than the hiking portrait: the hero already uses a
+    // near-identical hiking shot, and two copies on one page reads badly.
+    image: "/gallery/dji-6.jpg",
+    intro: [
+      "With the Nature Adventure Club I guide hiking trips across Lebanon's mountains, valleys, and coastal trails — handling route planning and on-trail safety while sharing what I know about the local terrain, ecology, and responsible hiking practices.",
+      "I also bring a drone. Capturing aerial footage of the landscapes and the people hiking through them documents Lebanon's natural heritage and helps promote the club's outings — some of my favorite shots are in the photography gallery below.",
+    ],
+    highlights: [
+      "Guide hiking trips across Lebanon's mountains, valleys, and coastal trails.",
+      "Handle route planning and on-trail safety for groups of hikers.",
+      "Share knowledge of local terrain, ecology, and responsible hiking practices.",
+      "Capture aerial drone footage of landscapes and participants, producing visual content that documents Lebanon's natural heritage and promotes the club's outings.",
+    ],
+    gallery: [
+      {
+        src: "/community/nac-hiking.jpeg",
+        alt: "Overlooking a mountain reservoir on a hike in Lebanon",
+        caption: "On the trail above a mountain reservoir",
+      },
+      { src: "/gallery/dji-1.jpg", alt: "Aerial drone photo of Lebanon" },
+      { src: "/gallery/dji-4.jpg", alt: "Aerial drone photo of Lebanon" },
+      { src: "/gallery/dji-6.jpg", alt: "Aerial drone photo of Lebanon" },
     ],
   },
 ];
@@ -288,11 +359,11 @@ export const education: {
   },
 ];
 
-// Leadership & extracurricular involvement (compact list)
+// Leadership & extracurricular involvement (compact list).
+// The Red Room and NAC roles live in `community` above with dedicated pages.
 export const involvement: { role: string; org: string; period?: string }[] = [
   { role: "Vice President", org: "AUB Automotive Club", period: "2024 - Present" },
   { role: "Technical Lead", org: "AUB Robotics Club", period: "2024 - 2025" },
-  { role: "Drone Pilot-Guide", org: "Nature Adventure Community", period: "2025 - Present" },
   { role: "Public Relations Specialist", org: "AEE AUB Student Chapter", period: "2025 - 2026" },
   { role: "Community Volunteer", org: "Children's Cancer Center of Lebanon (CCCL)" },
 ];
