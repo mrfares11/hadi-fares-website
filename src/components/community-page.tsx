@@ -32,6 +32,16 @@ export function CommunityPage({ data }: { data: CommunityRole }) {
               <h1 className="mt-4 max-w-4xl font-serif text-4xl font-medium uppercase leading-[1.02] tracking-tight sm:text-6xl">
                 {data.role}
               </h1>
+              {data.link && (
+                <a
+                  href={data.link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="label mt-6 inline-flex items-center gap-1 text-muted transition-colors hover:text-foreground"
+                >
+                  {data.link.label} ↗
+                </a>
+              )}
             </Reveal>
           </div>
         </SectionShell>

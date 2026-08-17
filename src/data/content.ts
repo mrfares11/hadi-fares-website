@@ -117,6 +117,7 @@ export type CommunityRole = {
   location?: string;
   card: string; // short description shown on the homepage card
   image: string; // homepage card image
+  link?: { href: string; label: string }; // external org link on the page hero
   intro: string[]; // paragraphs on the dedicated page
   highlights: string[]; // bullet list on the dedicated page
   gallery: Shot[]; // photo grid on the dedicated page
@@ -130,7 +131,11 @@ export const community: CommunityRole[] = [
     period: "Sep 2024 - Present",
     location: "Beirut, Lebanon",
     card: "Leading student engineering projects in fabrication, electronics, and circuit design — running Red Room operations and organizing every makerspace event and workshop.",
-    image: "/community/red-room-lab.jpeg",
+    image: "/community/red-room-screen.jpg",
+    link: {
+      href: "https://sites.aub.edu.lb/makerspace/",
+      label: "AUB Makerspace site",
+    },
     intro: [
       "The Red Room is AUB's student makerspace — a workshop where students design, prototype, and build. As Head of JEDIs (Junior Engineering Design Innovators), I lead student engineering projects in fabrication, electronics, and circuit design, manage the Red Room's day-to-day operations, and organize all of the makerspace's events and workshops.",
       "The work is hands-on and real: from fabrication, electronics, and circuit-design projects to developing new materials with advanced manufacturing tools. One favorite: carbon-fiber-reinforced composites made from recycled plastic bottles, with 3D-printing parameters optimized for strength.",
@@ -143,9 +148,24 @@ export const community: CommunityRole[] = [
     ],
     gallery: [
       {
+        src: "/community/red-room-screen.jpg",
+        alt: "The Red Room makerspace with a robot on the workbench",
+        caption: "The Red Room, AUB's student makerspace",
+      },
+      {
+        src: "/community/red-room-workshop.jpg",
+        alt: "Students working on laptops and hardware during a workshop in the Red Room",
+        caption: "Workshop day in the Red Room",
+      },
+      {
+        src: "/community/red-room-space.jpg",
+        alt: "Workbenches and equipment inside the Red Room",
+        caption: "Benches, tools, and build space",
+      },
+      {
         src: "/community/red-room-lab.jpeg",
         alt: "At an electronics bench in the Red Room makerspace",
-        caption: "At the electronics bench in the Red Room",
+        caption: "At the electronics bench",
       },
       {
         src: "/projects/recycler.jpg",
@@ -181,13 +201,30 @@ export const community: CommunityRole[] = [
         caption: "The group at the top, flag in hand",
       },
       {
+        src: "/community/nac-wetland.jpg",
+        alt: "Hikers overlooking wetlands and green fields in the Bekaa plain",
+        caption: "Above the Bekaa's wetlands",
+      },
+      {
+        src: "/community/nac-rafting.jpg",
+        alt: "Rafts gathered below rapids on a turquoise river",
+        caption: "Rafting day on the Assi River",
+      },
+      {
+        src: "/community/nac-hermel.jpg",
+        alt: "The group resting in the shade of the Kamouh el-Hermel monument",
+        caption: "A break in the shade of the Kamouh el-Hermel",
+      },
+      {
+        src: "/community/nac-summit-cross.jpg",
+        alt: "Aerial view of hikers gathered on a mountaintop plateau beside a stone cross",
+        caption: "A summit gathering, seen from the drone",
+      },
+      {
         src: "/community/nac-hiking.jpeg",
         alt: "Overlooking a mountain reservoir on a hike in Lebanon",
         caption: "On the trail above a mountain reservoir",
       },
-      { src: "/gallery/dji-1.jpg", alt: "Aerial drone photo of Lebanon" },
-      { src: "/gallery/dji-4.jpg", alt: "Aerial drone photo of Lebanon" },
-      { src: "/gallery/dji-6.jpg", alt: "Aerial drone photo of Lebanon" },
     ],
   },
 ];
