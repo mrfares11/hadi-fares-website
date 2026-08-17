@@ -1,4 +1,5 @@
 import { Nav } from "@/components/nav";
+import { ScrollRestore } from "@/components/scroll-link";
 import { Hero } from "@/components/hero";
 import { Statement } from "@/components/statement";
 import { About } from "@/components/about";
@@ -13,6 +14,7 @@ import { Contact, Footer } from "@/components/contact";
 export default function Home() {
   return (
     <>
+      <ScrollRestore />
       <Nav />
       <main className="flex-1">
         <Hero />

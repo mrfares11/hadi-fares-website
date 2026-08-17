@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Nav } from "@/components/nav";
+import { ScrollLink } from "@/components/scroll-link";
 import { Footer } from "@/components/contact";
 import { SectionShell } from "@/components/section";
 import { Reveal } from "@/components/reveal";
@@ -19,12 +19,12 @@ export function CommunityPage({ data }: { data: CommunityRole }) {
         >
           <div className="mx-auto max-w-6xl">
             <Reveal>
-              <Link
-                href="/#community"
+              <ScrollLink
+                target="community"
                 className="label text-muted transition-colors hover:text-foreground"
               >
                 ← Community &amp; Volunteering
-              </Link>
+              </ScrollLink>
               <p className="label mt-8 text-accent">
                 {data.org} · {data.period}
                 {data.location ? ` · ${data.location}` : ""}
@@ -98,12 +98,12 @@ export function CommunityPage({ data }: { data: CommunityRole }) {
               </div>
 
               <Reveal>
-                <Link
-                  href="/#community"
+                <ScrollLink
+                  target="community"
                   className="label mt-12 inline-flex items-center gap-2 text-accent transition-colors hover:text-foreground"
                 >
                   ← Back to all community work
-                </Link>
+                </ScrollLink>
               </Reveal>
             </div>
           </SectionShell>

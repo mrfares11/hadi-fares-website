@@ -3,15 +3,16 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { site } from "@/data/content";
+import { ScrollLink } from "@/components/scroll-link";
 
-// Root-relative so the nav also works from subpages like /community/nac.
+// Section targets on the homepage; ScrollLink keeps the URL free of #hashes.
 const links = [
-  { href: "/#about", label: "About" },
-  { href: "/#experience", label: "Experience" },
-  { href: "/#projects", label: "Work" },
-  { href: "/#publications", label: "Papers" },
-  { href: "/#community", label: "Community" },
-  { href: "/#gallery", label: "Photos" },
+  { target: "about", label: "About" },
+  { target: "experience", label: "Experience" },
+  { target: "projects", label: "Work" },
+  { target: "publications", label: "Papers" },
+  { target: "community", label: "Community" },
+  { target: "gallery", label: "Photos" },
 ];
 
 export function Nav() {
@@ -39,20 +40,20 @@ export function Nav() {
         <div className="flex items-center gap-6">
           <ul className="label hidden items-center gap-6 text-white/60 md:flex">
             {links.map((l) => (
-              <li key={l.href}>
-                <Link href={l.href} className="transition-colors hover:text-white">
+              <li key={l.target}>
+                <ScrollLink target={l.target} className="transition-colors hover:text-white">
                   {l.label}
-                </Link>
+                </ScrollLink>
               </li>
             ))}
           </ul>
 
-          <Link
-            href="/#contact"
+          <ScrollLink
+            target="contact"
             className="label hidden rounded-full border border-white/40 px-4 py-2 transition-colors hover:border-white hover:bg-white hover:text-black sm:inline-block"
           >
             Contact me
-          </Link>
+          </ScrollLink>
 
           <button
             onClick={() => setOpen((o) => !o)}
@@ -67,15 +68,15 @@ export function Nav() {
 
       {open && (
         <ul className="label flex flex-col border-t border-white/10 bg-black/95 px-5 py-2 md:hidden">
-          {[...links, { href: "/#contact", label: "Contact" }].map((l) => (
-            <li key={l.href}>
-              <Link
-                href={l.href}
-                onClick={() => setOpen(false)}
+          {[...links, { target: "contact", label: "Contact" }].map((l) => (
+            <li key={l.target}>
+              <ScrollLink
+                target={l.target}
+                onNavigate={() => setOpen(false)}
                 className="block py-3 text-white/70 transition-colors hover:text-white"
               >
                 {l.label}
-              </Link>
+              </ScrollLink>
             </li>
           ))}
         </ul>
