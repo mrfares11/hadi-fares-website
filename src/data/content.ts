@@ -220,11 +220,6 @@ export const community: CommunityRole[] = [
         alt: "Aerial view of hikers gathered on a mountaintop plateau beside a stone cross",
         caption: "A summit gathering, seen from the drone",
       },
-      {
-        src: "/community/nac-hiking.jpeg",
-        alt: "Overlooking a mountain reservoir on a hike in Lebanon",
-        caption: "On the trail above a mountain reservoir",
-      },
     ],
   },
 ];
